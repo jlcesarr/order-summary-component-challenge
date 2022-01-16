@@ -21,8 +21,8 @@ body{
 }
 
 .cards{
-    padding: 0 2em;
-    margin: 0 auto;
+    padding: 4em 1em;
+    width: max(10%, 375px);
 }
 
 
@@ -92,9 +92,13 @@ body{
     width: 100%;
 }
 
+.card__title{
+    font-size: 1.5rem;
+}
+
 .card__title, .card__plan-type{
     color: hsl(223, 47%, 23%);
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .card__order--proceed{
@@ -103,6 +107,7 @@ body{
     min-width: 100%;
     border-radius: 8px;
     color: white;
+    box-shadow: 0 20px 25px hsl(245deg 75% 65% / 30%);
 }
 
 .card__order--proceed:hover{
