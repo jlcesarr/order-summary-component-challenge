@@ -11,25 +11,22 @@
 
 body{
     font-family: 'Red Hat Display', sans-serif;
+    background: hsl(225, 100%, 94%) url(images/pattern-background-desktop.svg) no-repeat;
+    background-size: cover;
+}
+
+
+.container{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     gap: 32px;
     justify-content: center;
     align-items: center;
-    background: hsl(225, 100%, 94%) url(images/pattern-background-desktop.svg) no-repeat;
-    background-size: cover;
-}
-
-@media screen and (max-width: 480px) {
-    body{
-        background: hsl(225, 100%, 94%) url(images/pattern-background-mobile.svg) no-repeat;
-        background-size: cover;
-    }
 }
 
 .cards{
-    padding: 4em 1em;
+    padding: 4rem 1rem;
     width: max(10%, 375px);
 }
 
@@ -38,7 +35,7 @@ body{
     background-color: #FFFFFF;
     border-radius: 18px;
     overflow: hidden;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
 }
 
 .card__content{
@@ -46,7 +43,6 @@ body{
     flex-direction: column;
     gap: 18px;
     overflow: hidden;
-    padding-bottom: 2rem;
     justify-content: center; /* vertical axis */
     align-items: center;
     padding: 1.125em 1.125em
@@ -54,6 +50,11 @@ body{
 
 .card p{
     font-size: 1rem;
+}
+
+.card__description{
+    text-align: center;
+    font-weight: 500;
 }
 
 .card__description, .card__plan-price{
@@ -83,6 +84,7 @@ body{
 
 .card__plan-change{
     grid-row: span 2;
+    font-size: 0.9em;
     grid-column: 3;
     font-weight: bold;
     justify-self: center;
@@ -90,11 +92,6 @@ body{
     /* justify-self: flex-end; */
 }
 
-
-.card__plan-change:hover{
-    opacity: 0.5;
-    text-decoration: none;
-}
 
 .card__image{
     width: 100%;
@@ -118,9 +115,7 @@ body{
     box-shadow: 0 20px 25px hsl(245deg 75% 65% / 30%);
 }
 
-.card__order--proceed:hover{
-    opacity: 0.5;
-}
+
 
 .card__order--cancel{
     text-decoration: none;
@@ -128,6 +123,36 @@ body{
     font-weight: bold;
 }
 
+
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+    body{
+        background: hsl(225, 100%, 94%) url(images/pattern-background-mobile.svg) no-repeat;
+        background-size: cover;
+    }
+}
+
+
+/* Elements State */
+
+.card__plan-change:hover{
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+
+.card__order--proceed:hover{
+    opacity: 0.5;
+}
+
+
 .card__order--cancel:hover{
     color: hsl(223, 47%, 23%);
 }
+
+/* Credits */
+
+.attribution { font-size: 1em; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
